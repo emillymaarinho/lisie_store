@@ -1,0 +1,84 @@
+.product_card {
+    background-color: #f2f2f2;
+    padding: 1em;
+    border: 1px solid #404040;
+    border-radius: 10px;
+    width: 24%;
+    margin: 0.5%;
+    cursor: pointer;
+    transition: transform .5s;
+    transform: translateX(0) scale(.9);
+}
+
+.product_card:hover,
+.product_card:focus { 
+    transform: translateX(8px) scale(1);
+}
+
+.product_card img {
+    height: 175px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.product_card h1 {
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    padding: .4em;
+    margin-bottom: .5em;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.product_card p {
+    display: flex;
+    color: #0d0d0d;
+    margin-bottom: 5px;
+}
+
+.category_text {
+    display: flex;
+    align-items: center;
+}
+
+.category_text span {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 5px;
+}
+
+.category_text .Colar {
+    background-color: #fbe7c6;
+}
+
+.category_text .Brinco {
+    background-color: #ffaebc;
+}
+
+.category_text .Pulseira {
+    background-color: #a0e7e5;
+}
+
+.category_text .Presilha {
+    background-color: #b4f8c8;
+}
+
+.category_text .Anel {
+    background-color: #ebb4f8;
+}
+
+.category_text .Corrente {
+    background-color: #f8c4b4;
+}
+
+.category_text .Conjuntos {
+    background-color: #b4c6f8;
+}
+

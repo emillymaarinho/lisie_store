@@ -1,0 +1,16 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Example",
+            "price": 0,
+            "image": "base64"
+        }
+    ],
+    "categories": [
+        {
+          "id": 1,
+          "name": "Example"
+        }
+    ]
+}

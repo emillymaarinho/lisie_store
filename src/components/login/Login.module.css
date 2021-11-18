@@ -1,0 +1,61 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+color: #0d0d0d;
+border: none;
+}
+
+a {
+    font-size: .8rem;
+   padding-bottom: 60px;
+}
+
+a:hover {
+    color: #737373;
+}
+
+.login_container {
+    background-color: #f2f2f2;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 10vh;
+    border-radius: 10px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    margin-bottom: 30px; 
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.forget_pass {
+    text-align: right;
+    display: block;
+}
+
+input[type="submit"] {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: #f2f2f2;
+    background-color: #737373;
+    cursor: pointer;
+}

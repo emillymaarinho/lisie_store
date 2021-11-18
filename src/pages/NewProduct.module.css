@@ -1,0 +1,10 @@
+.newproduct_container {
+    width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.newproduct_container h1 {
+    font-size: 20px;
+    text-align: center;
+}
