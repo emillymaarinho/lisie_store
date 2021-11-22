@@ -16,7 +16,7 @@ const NewProduct = () => {
 
     return (
         <div className={styles.newproduct_container}>
-            <h1>Adicionar produtos</h1>
+            <h1>Adicione seu produto</h1>
             <ProductForm handleSubmit={addNewProduct} btnText="Adicionar produto" />
         </div>
     )

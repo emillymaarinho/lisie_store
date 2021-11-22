@@ -1,11 +1,12 @@
 .button {
-    text-align: right;
     padding: 12px;
 }
 
-.search {
-    text-align: left;
-    padding: 10px;
+
+
+.btn_search {
+    display: flex;
+    justify-content: space-between;
 }
 
 .container {

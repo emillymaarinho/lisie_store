@@ -14,7 +14,7 @@ const Products = () => {
     const [products, setProducts] = useState([])
     const [removeLoading, setRemoveLoading] = useState(false)
     const [productsCopy, setProductsCopy] = useState([])
-   
+
 
     const filter = (searchString) => {
         const filtered = productsCopy.filter((product) =>
@@ -38,19 +38,21 @@ const Products = () => {
 
     return (
         <div >
-            <div className={styles.button} >
-                <LinkBotton to="/newproduct" text="Novo Produto" />
-            </div>
+            <div className={styles.btn_search}>
             <div className={styles.search}>
-                <Search hendleOnChangeSearch={hendleOnChangeSearch} />
+                    <Search hendleOnChangeSearch={hendleOnChangeSearch} />
+                </div>
+                <div className={styles.button} >
+                    <LinkBotton to="/newproduct" text="Novo Produto" />
+                </div>
             </div>
             <Container customClass="start">
                 {products.length > 0 && products.map((product) => (
-                    
+
                     <ProductCard name={product.name} id={product.id} price={product.price} category={product.category.name}
                         key={product.id} image={product.image} />
                 ))}
-                
+
                 {!removeLoading && <Loading />}
                 {removeLoading && products.length === 0 && (
                     <p>Näo há produtos cadastrados!</p>

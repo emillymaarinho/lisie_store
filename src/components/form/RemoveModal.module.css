@@ -1,28 +1,39 @@
 .modal{
-    background-color:#0d0d0d;
+    background-color:#f2f2f2;
     text-align: center;
     padding: 40px;
     position: absolute;
-    color: #f2f2f2;
     left: 50%;
     top: 55%;
-    width: 400px;
     transform: translate(-50%, -50%);
     border-radius: 30px;
+    border: 1px solid #0d0d0d;
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    
 }
 
 .btn {
-    display: flex;
-    justify-content: space-evenly;
-    color: #404040;
-    padding: 20px 10px 10px 10px;
-    text-decoration: none;
-    transition: 0.5s;
-    cursor: pointer;
     border: none;
+    display: inline-block;
+    padding: 10px 15px 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 30px;
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    -webkit-transition: background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+
+.btn:hover {
+    border: 1px solid #ececec;
+    background-color: #ccc;
 }
 
 .msg {
-    color: #f2f2f2;
+    color: #0d0d0d;
 }
 

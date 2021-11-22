@@ -16,7 +16,7 @@ function App() {
       <NavBar />
       <Switch>
         <Container >
-          <Route  path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route path="/products">
@@ -25,7 +25,7 @@ function App() {
           <Route path="/store">
             <Store />
           </Route>
-          <Route exact path="/">
+          <Route  path="/login">
             <Login/>
           </Route>
           <Route path="/newproduct">

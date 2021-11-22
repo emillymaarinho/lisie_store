@@ -4,11 +4,12 @@ import SubmitBotton from '../form/SubmitBotton'
 import Select from "../form/Select"
 import Message from '../layout/Mesaage'
 import { useEffect, useState } from "react"
+
 import { getAllCategories } from "../../Services/requests/products/productsRequests"
 
 const ProductForm = ({ handleSubmit, btnText, productData }) => {
 
-    const [product, setProduct] = useState({ productData, category: {} })
+    const [product, setProduct] = useState(productData || { category: {} })
     const [categories, setCategories] = useState([])
     const [status, setStatus] = useState(
         {
@@ -53,7 +54,6 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
         const file = e.target.files[0];
         getBase64(file).then(
             data => setProduct({ ...product, image: data }))
-
     }
 
     const validateProduct = () => {
@@ -65,9 +65,13 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
             setStatus({ type: 'error', message: 'Seu produto precisa de um valor!' })
             return false;
         }
-        if (!product.category) {
+        if (!product.category.id) {
             setStatus({ type: 'error', message: 'Seu produto precisa de uma categoria!' })
             return false;
+        }
+        if (!product.image) {
+            setStatus({ type: 'error', message: 'Seu produto precisa de uma imagem!' })
+            return false
         }
         return true
     }
@@ -99,7 +103,9 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
                 <Input type='file' name="image" handleChange={handleUploadImage} accept="application/png"
                     text='Selecione imagem:' image={product.image} />
             </div>
-            <SubmitBotton text={btnText} />
+            <div className={styles.btn}>
+                <SubmitBotton text={btnText} />
+            </div>
         </form>
     )
 }

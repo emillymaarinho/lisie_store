@@ -1,9 +1,8 @@
 import styles from './ProductEdit.module.css'
 
-import { useParams, useHistory, Link } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { BsFillTrashFill } from 'react-icons/bs'
-
 import RemoveModal from '../components/form/RemoveModal'
 import ProductForm from '../components/products/ProductForm'
 import Loading from '../components/layout/Loading'
@@ -15,10 +14,9 @@ const ProductEdit = () => {
 
     const { id } = useParams()
     const history = useHistory()
-    const [product, setProduct] = useState([])
+    const [product, setProduct] = useState({})
     const [showProductForm, setShowProductForm] = useState(false)
     const [isModalVisible, setIsModalVisible] = useState(false)
-
 
     useEffect(() => {
         const getProduct = async (id) => {
@@ -56,13 +54,14 @@ const ProductEdit = () => {
         return parseFloat(value).toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
     }
 
+
     const renderProductInfo = () => {
         return (
             <div >
                 <div className={styles.product_info}>
                     <img src={product.image} alt='imagem'></img>
                     <div>
-                        <div >
+                        <div className={styles.space}>
                             <span>{product.name}</span>
                         </div>
                         <div className={styles.space}>
@@ -81,7 +80,6 @@ const ProductEdit = () => {
                         msg='produto?' />
                 </div>
             </div>
-
         )
     }
 
@@ -89,7 +87,7 @@ const ProductEdit = () => {
         return (
             <div >
                 <ProductForm handleSubmit={editProduct} btnText="Concluir edição"
-                    productData={product}></ProductForm>
+                    productData={product} ></ProductForm>
             </div>
         )
     }

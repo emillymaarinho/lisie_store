@@ -5,9 +5,9 @@ const Home = () => {
     return (
         <div className={styles.home_container}>
             <section >
-                <h1> Bem vinda a sua loja, Letícia!</h1>
-                <p>Comece a adicionar seus produtos agora mesmo!</p>
-                <LinkBotton to="/newproduct" text="Adicionar produto" />
+                <h1> Bem vindo(a) a sua loja!</h1>
+                <p>Faça seu login para acesso.</p>
+                <LinkBotton to="/login" text="Login" />
             </section>
         </div>
     )
