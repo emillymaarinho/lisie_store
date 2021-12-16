@@ -43,7 +43,7 @@ const Products = () => {
                     <Search hendleOnChangeSearch={hendleOnChangeSearch} />
                 </div>
                 <div className={styles.button} >
-                    <LinkBotton to="/newproduct" text="Novo Produto" />
+                    <LinkBotton to="/newproduct" text="Adicionar Produto" />
                 </div>
             </div>
             <Container customClass="start">

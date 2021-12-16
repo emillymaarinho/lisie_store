@@ -1,32 +1,20 @@
 .navbar {
-   text-align: center;
-    padding: 25px;
-}
-
-.list {
+    padding: 25px 30px 50px 45px;
     display: flex;
-    text-align: center;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  
+    justify-content: space-between;
 }
 
 .logo {
     height: 75px;
     width: 160px;
+    text-align: center;
+   
 }
 
-.item {
-    margin-right: 1em;
-}
-
-.item a {
-    color: #404040;
+.icon {
+    height: 30px;
+    width: 30px;
     text-decoration: none;
-}
-
-.item a:hover {
-    color: #A6A6A6;
+    margin: 20px;
+    cursor: pointer;
 }

@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { useState, useEffect } from 'react';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Container from './components/layout/Container';
@@ -8,32 +9,50 @@ import Products from './pages/Products';
 import Store from './pages/Store';
 import NewProduct from './pages/NewProduct'
 import ProductEdit from './pages/ProductEdit';
-
+import PrivateRoute from './components/routes/PrivateRoute';
+import PublicRoute from './components/routes/PublicRoute';
 
 function App() {
+
+  const [userLogged, setUserLogged] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("userLogged");
+    if (token) setUserLogged(true);
+  }, []);
+
+  const logout = () => {
+    localStorage.removeItem("userLogged");
+    setUserLogged(false);
+  };
+
+  const loginEvent = () => {
+    setUserLogged(true);
+  }
+
   return (
     <Router>
-      <NavBar />
+      <NavBar userLogged={userLogged} logout={() => logout()} />
       <Switch>
         <Container >
-          <Route exact path="/">
+          <PublicRoute exact path="/">
             <Home />
-          </Route>
-          <Route path="/products">
+          </PublicRoute>
+          <PrivateRoute path="/products">
             <Products />
-          </Route>
-          <Route path="/store">
+          </PrivateRoute>
+          <PrivateRoute path="/store">
             <Store />
-          </Route>
-          <Route  path="/login">
-            <Login/>
-          </Route>
-          <Route path="/newproduct">
+          </PrivateRoute>
+          <PublicRoute path="/login">
+            <Login loginEvent={() => loginEvent()} />
+          </PublicRoute>
+          <PrivateRoute path="/newproduct">
             <NewProduct />
-          </Route>
-          <Route path="/product/:id">
+          </PrivateRoute>
+          <PrivateRoute path="/product/:id">
             <ProductEdit />
-          </Route>
+          </PrivateRoute>
         </Container>
       </Switch>
       <Footer />
