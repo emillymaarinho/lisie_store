@@ -1,8 +1,13 @@
 .form {
     width: 100%;
-    margin: 2em;
 }
 
 .btn {
     text-align: right;
+}
+
+@media (max-width: 425px) {
+    .btn {
+        text-align: center;
+    }
 }

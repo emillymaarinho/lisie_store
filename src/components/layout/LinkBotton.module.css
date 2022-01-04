@@ -1,14 +1,55 @@
 .btn {
     background-color: #0D0D0D;
     color: #f2f2f2;
-    padding: 8px 80px;
+    padding: 5px 20px;
     text-emphasis: none;
     transition: 0.5s;
     cursor: pointer;
-    border-radius: 20px;
-    font-size: 18px;
+    border-radius: 30px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 .btn:hover {
     color: #737373;
+}
+
+@media (max-width: 2560px) {
+    .btn {
+        font-size: 40px;
+        padding: 8px 25px;   
+    }
+}
+
+@media (max-width: 2000px) {
+    .btn {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1580px) {
+    .btn {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        font-size: 15px;
+        padding: 5px 20px;  
+    }
+}
+
+@media (max-width: 493px) {
+    .btn {
+        font-size: 15px;
+    }
+  
 }

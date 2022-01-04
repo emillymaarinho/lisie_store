@@ -1,16 +1,4 @@
 .container {
-    width: 1200px;
-    justify-content: space-between;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    display: flex;
+    margin: 0 40px;
 }
 
-.start {
-    justify-content: flex-start;
-}
-
-.column {
-    flex-direction: column;
-    justify-content: flex-start;
-}

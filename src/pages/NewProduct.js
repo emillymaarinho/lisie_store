@@ -12,12 +12,14 @@ const NewProduct = () => {
         await addProduct(product)
         history.push('/products', { message: 'Projeto criado com SUCESSO!' })
     }
-   
+
 
     return (
         <div className={styles.newproduct_container}>
             <h1>Adicione seu produto</h1>
-            <ProductForm handleSubmit={addNewProduct} btnText="Adicionar produto" />
+            <div>
+                <ProductForm handleSubmit={addNewProduct} btnText="Adicionar produto" />
+            </div>
         </div>
     )
 }

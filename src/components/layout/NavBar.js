@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../img/logo_lisie.png'
 import home from '../../img/casa.png'
@@ -9,19 +8,10 @@ import styles from './NavBar.module.css'
 
 const NavBar = (props) => {
 
-    useEffect(() => {
-        const menu = () => {
-            localStorage.getItem("userLogged")
-        }
-        menu()
-    }, [])
-
-   
-
     return (
-        <nav className={styles.navbar}>
+        <nav className={props.userLogged ? styles.navbar : styles.navbar_centered}>
             <div>
-                <Link to="/">
+                <Link to={props.userLogged ? "/products" : "/"}>
                     <img className={styles.logo} src={logo} alt="lisie" />
                 </Link>
             </div>

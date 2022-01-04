@@ -6,7 +6,7 @@ const RemoveModal = ({ show, msg, onClickYes, onClickNo }) => {
             {show ?
                 <div className={styles.modal}>
                     <span className={styles.msg}> Tem certeza que deseja excluir este {msg}</span>
-                    <div   >
+                    <div className={styles.btn_container}  >
                         <button className={styles.btn} onClick={onClickYes}>SIM</button>
                         <button className={styles.btn} onClick={onClickNo}>NÃO</button>
                     </div>

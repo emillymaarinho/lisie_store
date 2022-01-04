@@ -1,5 +1,4 @@
 import ProductCard from "../components/products/ProductCard"
-import Container from '../components/layout/Container'
 import Loading from '../components/layout/Loading'
 import LinkBotton from '../components/layout/LinkBotton'
 import Search from '../components/form/Search'
@@ -37,7 +36,7 @@ const Products = () => {
     }, [])
 
     return (
-        <div >
+        <div className={styles.btn_container}>
             <div className={styles.btn_search}>
             <div className={styles.search}>
                     <Search hendleOnChangeSearch={hendleOnChangeSearch} />
@@ -46,7 +45,7 @@ const Products = () => {
                     <LinkBotton to="/newproduct" text="Adicionar Produto" />
                 </div>
             </div>
-            <Container customClass="start">
+            <div className={styles.container}>
                 {products.length > 0 && products.map((product) => (
 
                     <ProductCard name={product.name} id={product.id} price={product.price} category={product.category.name}
@@ -57,7 +56,7 @@ const Products = () => {
                 {removeLoading && products.length === 0 && (
                     <p>Näo há produtos cadastrados!</p>
                 )}
-            </Container>
+            </div>
         </div>
     )
 }

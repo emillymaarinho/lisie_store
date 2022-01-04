@@ -38,15 +38,15 @@ function App() {
           <PublicRoute exact path="/">
             <Home />
           </PublicRoute>
+          <PublicRoute path="/login">
+            <Login loginEvent={() => loginEvent()} />
+          </PublicRoute>
           <PrivateRoute path="/products">
             <Products />
           </PrivateRoute>
           <PrivateRoute path="/store">
             <Store />
           </PrivateRoute>
-          <PublicRoute path="/login">
-            <Login loginEvent={() => loginEvent()} />
-          </PublicRoute>
           <PrivateRoute path="/newproduct">
             <NewProduct />
           </PrivateRoute>

@@ -6,7 +6,6 @@ import { BsFillTrashFill } from 'react-icons/bs'
 import RemoveModal from '../components/form/RemoveModal'
 import ProductForm from '../components/products/ProductForm'
 import Loading from '../components/layout/Loading'
-import Container from '../components/layout/Container'
 import { getOneProduct, UpDateProduct, removeProduct } from '../Services/requests/products/productsRequests'
 
 
@@ -72,7 +71,7 @@ const ProductEdit = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className={styles.btn_remove_container}>
                     <button className={styles.btn_remove} onClick={remove} >
                         <BsFillTrashFill />
                     </button>
@@ -85,7 +84,7 @@ const ProductEdit = () => {
 
     const renderProductForm = () => {
         return (
-            <div >
+            <div>
                 <ProductForm handleSubmit={editProduct} btnText="Concluir edição"
                     productData={product} ></ProductForm>
             </div>
@@ -95,18 +94,19 @@ const ProductEdit = () => {
     return (<>
         {product.name ? (
             <div >
-                <Container >
-                    <div className={styles.details_container}>
-                        <button className={styles.btn} onClick={toggleProductForm}>
-                            {!showProductForm ? 'Editar' : 'Voltar'}
-                        </button>
-                        {!showProductForm ? (
-                            renderProductInfo()
-                        ) : (
-                            renderProductForm()
-                        )}
-                    </div>
-                </Container>
+                <div className={styles.btn_container}>
+                    <button className={styles.btn} onClick={toggleProductForm}>
+                        {!showProductForm ? 'Editar' : 'Voltar'}
+                    </button>
+                </div>
+                <div className={styles.details_container}>
+
+                    {!showProductForm ? (
+                        renderProductInfo()
+                    ) : (
+                        renderProductForm()
+                    )}
+                </div>
             </div>
         ) : <Loading />
         }

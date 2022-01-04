@@ -20,10 +20,10 @@ a:hover {
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px 30px;
     margin-top: 10vh;
     border-radius: 10px;
     text-align: center;
+    padding: 18px 18px 18px 30px;
 }
 
 form {
@@ -43,8 +43,9 @@ label {
 }
 
 .forget_pass {
-    text-align: right;
+    text-align: center;
     display: block;
+    padding: auto;
 }
 
 input[type="submit"] {
@@ -59,3 +60,65 @@ input[type="submit"] {
     background-color: #737373;
     cursor: pointer;
 }
+
+@media (max-width: 2560px) {
+    .login_container {
+        width: 40%;
+    }
+    .forget_pass {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 1440px) {    
+    .forget_pass {
+        font-size: 20px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .login_container {
+        margin-top: 5px;
+    }
+    .forget_pass {
+        font-size: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login_container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 425px) {
+    .login_container {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .forget_pass {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .login_container {
+        width: 100%;
+        margin-top: 0;
+    }
+    .forget_pass {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
