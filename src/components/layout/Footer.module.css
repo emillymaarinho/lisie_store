@@ -36,12 +36,20 @@
     color: #0D0D0D;
 }
 
+.mensage {
+    font-size: 20px;
+    margin-top: 10px;
+    font-style: italic;
+}
 @media (max-width: 2560px) {
     .list {
         font-size: 35px;
     }
     .copy_right {
         font-size: 28px;
+    }
+    .mensage {
+        font-size: 35px;
     }
 }
 
@@ -55,7 +63,11 @@
     .copy_right {
         font-size: 18px;
     }
+    .mensage {
+        font-size: 20px;
+    }
 }
+
 
 @media (max-width: 1024px) {
     .footer {
@@ -65,6 +77,38 @@
         font-size: 15px;
     }
     .copy_right {
+        font-size: 15px;
+    }
+    .mensage {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .list {
+        font-size: 12px;
+    }
+    .copy_right {
+        font-size: 12px;
+    }
+    .mensage {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 425px) {
+    .copy_right {
+        font-size: 10px;
+    }
+    .mensage {
         font-size: 12px;
     }
 }
+
+@media (max-width: 375px) {
+    .mensage {
+        font-size: 10px;
+    }
+}
+
