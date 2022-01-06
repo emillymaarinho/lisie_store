@@ -73,7 +73,12 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
             setStatus({ type: 'error', message: 'Seu produto precisa de uma imagem!' })
             return false
         }
+
         return true
+    }
+
+    const clearMessage = () => {
+        setStatus({ type: '', message: '' })
     }
 
     const submit = (e) => {
@@ -87,7 +92,7 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
     return (
         <div className={styles.form}>
             <form onSubmit={submit} >
-                {status.message && <Message type={status.type} msg={status.message} />}
+                <Message type={status.type} msg={status.message} clear={clearMessage} />
                 <div>
                     <Input handleChange={handleChange} placeholder="Nome do produto" text="Nome do produto:"
                         type="text" name="name" value={product.name} />

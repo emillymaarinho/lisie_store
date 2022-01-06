@@ -6,7 +6,6 @@ import Container from './components/layout/Container';
 import Home from './pages/Home';
 import Login from './components/login/Login';
 import Products from './pages/Products';
-import Store from './pages/Store';
 import NewProduct from './pages/NewProduct'
 import ProductEdit from './pages/ProductEdit';
 import PrivateRoute from './components/routes/PrivateRoute';
@@ -44,9 +43,9 @@ function App() {
           <PrivateRoute path="/products">
             <Products />
           </PrivateRoute>
-          <PrivateRoute path="/store">
+          {/* <PrivateRoute path="/store">
             <Store />
-          </PrivateRoute>
+          </PrivateRoute> */}
           <PrivateRoute path="/newproduct">
             <NewProduct />
           </PrivateRoute>

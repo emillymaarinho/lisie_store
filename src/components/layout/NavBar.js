@@ -3,7 +3,7 @@ import logo from '../../img/logo_lisie.png'
 import home from '../../img/casa.png'
 import products from '../../img/box (1).png'
 import getout from '../../img/logout (1).png'
-import store from '../../img/bolsa-de-compras.png'
+// import store from '../../img/bolsa-de-compras.png'
 import styles from './NavBar.module.css'
 
 const NavBar = (props) => {
@@ -23,9 +23,9 @@ const NavBar = (props) => {
                         </Link>
                         <Link to="/products">
                             <img className={styles.icon} src={products} alt="products" /></Link>
-                        <Link to="/store">
+                        {/* <Link to="/store">
                             <img className={styles.icon} src={store} alt="store" />
-                        </Link>
+                        </Link> */}
                         <button onClick={props.logout}>
                             <img className={styles.icon} src={getout} alt="getout" />
                         </button>

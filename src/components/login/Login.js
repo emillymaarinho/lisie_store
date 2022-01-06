@@ -55,7 +55,7 @@ const Login = (props) => {
                     value={login.email} />
                 <Input handleChange={handlePassowrd} text="Senha:" type="password" name="password" placeholder="Digite sua senha"
                     value={login.password} />
-                <a href="/todo" className={styles.forget_pass}>Esqueceu a senha?</a>
+                {/* <a href="/todo" className={styles.forget_pass}>Esqueceu a senha?</a> */}
                 <SubmitBotton text="Entrar"/> 
             </form>
         </div>
