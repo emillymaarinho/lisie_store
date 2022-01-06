@@ -1,6 +1,7 @@
 {
   "name": "lisie",
   "version": "0.1.0",
+  "homepage": "LISIE/lisie",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
