@@ -18,3 +18,43 @@
     color: #7b7b7b;
 }
 
+.home_btn {
+    text-align: center;
+}
+
+@media (max-width: 2560px) {
+    .home_container h1 {
+        font-size: 60px;
+    }
+    .home_container p {
+        font-size: 35px;
+    }
+    .home_container {
+        height: 800px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .home_container h1 {
+        font-size: 35px;
+    }
+    .home_container p {
+        font-size: 20px;
+    }
+    .home_container {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home_container h1 {
+        font-size: 25px;
+    }
+    .home_container p {
+        font-size: 16px;
+    }
+    .home_container {
+        height: 300px;
+    }
+}
+

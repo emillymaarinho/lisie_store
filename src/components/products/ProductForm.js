@@ -73,7 +73,12 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
             setStatus({ type: 'error', message: 'Seu produto precisa de uma imagem!' })
             return false
         }
+
         return true
+    }
+
+    const clearMessage = () => {
+        setStatus({ type: '', message: '' })
     }
 
     const submit = (e) => {
@@ -85,28 +90,30 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
     }
 
     return (
-        <form onSubmit={submit} className={styles.form}>
-            {status.message && <Message type={status.type} msg={status.message} />}
-            <div>
-                <Input handleChange={handleChange} placeholder="Nome do produto" text="Nome do produto:"
-                    type="text" name="name" value={product.name} />
-            </div>
-            <div>
-                <Input handleChange={handleChange} type="number" text="Valor do produto:" placeholder="Valor do produto"
-                    name="price" value={product.price} />
-            </div>
-            <div>
-                <Select type="category_id" handleOnChange={handleCategory} options={categories} text="Categoria:"
-                    value={product.category.id} />
-            </div>
-            <div>
-                <Input type='file' name="image" handleChange={handleUploadImage} accept="application/png"
-                    text='Selecione imagem:' image={product.image} />
-            </div>
-            <div className={styles.btn}>
-                <SubmitBotton text={btnText} />
-            </div>
-        </form>
+        <div className={styles.form}>
+            <form onSubmit={submit} >
+                <Message type={status.type} msg={status.message} clear={clearMessage} />
+                <div>
+                    <Input handleChange={handleChange} placeholder="Nome do produto" text="Nome do produto:"
+                        type="text" name="name" value={product.name} />
+                </div>
+                <div>
+                    <Input handleChange={handleChange} type="number" text="Valor do produto:" placeholder="Valor do produto"
+                        name="price" value={product.price} />
+                </div>
+                <div>
+                    <Select type="category_id" handleOnChange={handleCategory} options={categories} text="Categoria:"
+                        value={product.category.id} />
+                </div>
+                <div>
+                    <Input type='file' name="image" handleChange={handleUploadImage} accept="application/png"
+                        text='Selecione imagem:' image={product.image} />
+                </div>
+                <div className={styles.btn}>
+                    <SubmitBotton text={btnText} />
+                </div>
+            </form>
+        </div>
     )
 }
 export default ProductForm

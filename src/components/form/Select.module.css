@@ -13,3 +13,47 @@
     border-radius: 30px;
     border: none;
 }
+
+@media (max-width: 2560px) {
+    .form_control select {
+        padding: 28px;
+        border-radius: 45px;
+        font-size: 35px;
+    }
+    .form_control label {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .form_control select {
+        padding: 15px;
+        border-radius: 40px;
+        font-size: 20px;
+    }
+    .form_control label {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .form_control select {
+        padding: 10px;
+        border-radius: 40px;
+        font-size: 15px;
+    }
+    .form_control label {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+    .form_control select {
+        padding: 8px;
+        border-radius: 40px;
+        font-size: 12px;
+    }
+    .form_control label {
+        font-size: 12px;
+    }
+}

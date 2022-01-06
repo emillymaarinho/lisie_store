@@ -2,13 +2,122 @@
     padding: 12px;
 }
 
-
-
 .btn_search {
     display: flex;
     justify-content: space-between;
 }
 
-.container {
-    display: flex;
+.btn_container {
+    text-align: right;
 }
+
+.container {
+    display: grid;
+    grid-auto-rows: minmax(290px, auto);
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    padding: 0px;
+    margin: 0px auto 40px;
+    transition: all 0.5s;
+
+    grid-template-columns: repeat(auto-fit, minmax(290px, 290px));
+    justify-content: center;
+    width: 2500px;
+    max-width: 2500px;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+@media (max-width: 2560px) {
+    .container {
+        width: 2500px;
+        grid-auto-rows: minmax(500px, auto);
+        grid-template-columns: repeat(auto-fit, minmax(600px, 600px));
+    }
+}
+
+@media (max-width: 2200px) {
+    .container {
+        width: 1870px;
+    }
+}
+
+@media (max-width: 1890px) {
+    .container {
+        width: 1560px;
+    }
+}
+
+@media (max-width: 1580px) {
+    .container {
+        width: 1250px;
+        grid-auto-rows: minmax(400px, auto);
+        grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
+    }
+}
+
+@media (max-width: 1270px) {
+    .container {
+        width: 940px;
+        grid-auto-rows: minmax(350px, auto);
+        grid-template-columns: repeat(auto-fit, minmax(450px, 450px));
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        grid-auto-rows: minmax(300px, auto);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    }
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: 840px;
+        grid-auto-rows: minmax(250px, auto);
+        grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+    }
+}
+
+@media (max-width: 880px) {
+    .container {
+        width: 800px;
+    }
+}
+
+@media (max-width: 770px) {
+    .container {
+        width: 650px;
+        grid-auto-rows: minmax(200px, auto);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    }
+}
+
+@media (max-width: 690px) {
+    .container {
+        width: 600px;
+        grid-auto-rows: minmax(150px, auto);
+        grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    }
+}
+
+@media (max-width: 493px) {
+    .btn_search {
+        flex-direction: column;
+    }
+    .container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 425px) {
+    .btn_container {
+        text-align: center;
+    }
+    .btn_search {
+        text-align: center;
+    }
+}
+

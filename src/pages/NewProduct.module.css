@@ -1,10 +1,45 @@
 .newproduct_container {
-    width: 450px;
-    margin: 0 auto;
-    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;   
 }
 
 .newproduct_container h1 {
     font-size: 20px;
     text-align: center;
+}
+
+@media (max-width: 2560px) {
+    .newproduct_container h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .newproduct_container h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .newproduct_container h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .newproduct_container{
+        font-size: 5.5px;
+    }
+}
+
+@media (max-width: 425px) {
+    .newproduct_container{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 375px) {
+    .newproduct_container{
+        font-size: 6.5px;
+    }
 }

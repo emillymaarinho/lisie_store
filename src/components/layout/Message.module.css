@@ -19,3 +19,27 @@
     background-color: #f8d7da;
     border-color: #f5c6bc;
 }
+
+@media (max-width: 2560px) {
+    .message {
+      font-size: 40px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .message {
+      font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .message {
+      font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .message {
+      font-size: 12px;
+    }
+}
