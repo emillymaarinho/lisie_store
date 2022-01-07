@@ -1,4 +1,5 @@
-const BASE_URL = process.env.PUBLIC_URL || "http://localhost:5000"
+// const BASE_URL = "http://localhost:5000"
+const BASE_URL = "https://raw.githubusercontent.com/emillymaarinho/lisie_store/develop/database/mockedDB.json"
 
 const getAllCategories = async () => {
     const response = await fetch(`${BASE_URL}/categories`, {

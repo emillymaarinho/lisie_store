@@ -34,24 +34,28 @@ function App() {
       <NavBar userLogged={userLogged} logout={() => logout()} />
       <Switch>
         <Container >
-          <PublicRoute exact path="/">
+          <PublicRoute exact path="/" userLogged={userLogged}>
             <Home />
           </PublicRoute>
-          <PublicRoute path="/login">
+          <PublicRoute exact path="/login" userLogged={userLogged}>
             <Login loginEvent={() => loginEvent()} />
           </PublicRoute>
-          <PrivateRoute path="/products">
-            <Products />
-          </PrivateRoute>
-          {/* <PrivateRoute path="/store">
+          {userLogged &&
+            <>
+              <PrivateRoute exact path="/products" userLogged={userLogged}>
+                <Products />
+              </PrivateRoute>
+              {/* <PrivateRoute path="/store">
             <Store />
           </PrivateRoute> */}
-          <PrivateRoute path="/newproduct">
-            <NewProduct />
-          </PrivateRoute>
-          <PrivateRoute path="/product/:id">
-            <ProductEdit />
-          </PrivateRoute>
+              <PrivateRoute exact path="/newproduct" userLogged={userLogged}>
+                <NewProduct />
+              </PrivateRoute>
+              <PrivateRoute exact path="/product/:id" userLogged={userLogged}>
+                <ProductEdit />
+              </PrivateRoute>
+            </>
+          }
         </Container>
       </Switch>
       <Footer />
