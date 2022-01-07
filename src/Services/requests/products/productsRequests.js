@@ -1,5 +1,4 @@
-// const BASE_URL = "http://localhost:5000"
-const BASE_URL = "https://raw.githubusercontent.com/emillymaarinho/lisie_store/develop/database/mockedDB.json"
+const BASE_URL = "http://localhost:5000"
 
 const getAllCategories = async () => {
     const response = await fetch(`${BASE_URL}/categories`, {
@@ -23,7 +22,6 @@ const addProduct = async (product) => {
 }
 
 const getAllProducts = async () => {
-    console.log("oi", BASE_URL)
     const response = await fetch(`${BASE_URL}/products`, {
         method: 'GET',
         headers: {
