@@ -1,5 +1,7 @@
+const BASE_URL = process.env.PUBLIC_URL || "http://localhost:5000"
+
 const getAllCategories = async () => {
-    const response = await fetch('http://localhost:5000/categories', {
+    const response = await fetch(`${BASE_URL}/categories`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -9,7 +11,7 @@ const getAllCategories = async () => {
 }
 
 const addProduct = async (product) => {
-    const response = await fetch('http://localhost:5000/products', {
+    const response = await fetch(`${BASE_URL}/products`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
@@ -20,7 +22,8 @@ const addProduct = async (product) => {
 }
 
 const getAllProducts = async () => {
-    const response = await fetch('http://localhost:5000/products', {
+    console.log("oi", BASE_URL)
+    const response = await fetch(`${BASE_URL}/products`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -30,7 +33,7 @@ const getAllProducts = async () => {
 }
 
 const removeProduct = async (id) => {
-    const response = await fetch(`http://localhost:5000/products/${id}`, {
+    const response = await fetch(`${BASE_URL}/${id}`, {
         method: 'DELETE',
         headers: {
             'content-type': 'application/json',
@@ -40,7 +43,7 @@ const removeProduct = async (id) => {
 }
 
 const getOneProduct = async (id) => {
-    const response = await fetch(`http://localhost:5000/products/${id}`, {
+    const response = await fetch(`${BASE_URL}/${id}`, {
         method: 'GET',
         headers: {
             'content-type': 'application.json',
@@ -50,7 +53,7 @@ const getOneProduct = async (id) => {
 }
 
 const UpDateProduct = async (product, id) => {
-    const response = await fetch(`http://localhost:5000/products/${id}`, {
+    const response = await fetch(`${BASE_URL}/${id}`, {
         method: 'PATCH',
         headers: {
             'content-type': 'application/json'

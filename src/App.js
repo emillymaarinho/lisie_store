@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <NavBar userLogged={userLogged} logout={() => logout()} />
       <Switch>
         <Container >
