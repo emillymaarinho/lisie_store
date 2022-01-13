@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
@@ -34,22 +34,22 @@ function App() {
       <NavBar userLogged={userLogged} logout={() => logout()} />
       <Switch>
         <Container >
-          <PublicRoute exact path="/">
+          <PublicRoute exact path="/" userLogged={userLogged}>
             <Home />
           </PublicRoute>
-          <PublicRoute path="/login">
+          <PublicRoute exact path="/login" userLogged={userLogged}>
             <Login loginEvent={() => loginEvent()} />
           </PublicRoute>
-          <PrivateRoute path="/products">
+          <PrivateRoute exact path="/products" userLogged={userLogged}>
             <Products />
           </PrivateRoute>
           {/* <PrivateRoute path="/store">
             <Store />
           </PrivateRoute> */}
-          <PrivateRoute path="/newproduct">
+          <PrivateRoute exact path="/newproduct" userLogged={userLogged}>
             <NewProduct />
           </PrivateRoute>
-          <PrivateRoute path="/product/:id">
+          <PrivateRoute exact path="/product/:id" userLogged={userLogged}>
             <ProductEdit />
           </PrivateRoute>
         </Container>

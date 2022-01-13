@@ -44,7 +44,7 @@
    background-color: #0d0d0d;
     color: #f2f2f2;
     padding: 5px;
-    margin-bottom: .5em;
+    margin-bottom: 5px;
     font-size: 1em;
     text-align: center;
     border-radius: 30px;
@@ -53,7 +53,7 @@
 
 .product_info p {
     font-size: 20px;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
 .btn_remove_container {
@@ -91,38 +91,38 @@
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 2000px) {
     .btn {
-        font-size: 25px;
-        padding: 8px 30px;
+        font-size: 30px;
+        padding: 10px 30px;
     }
     .btn_remove {
-        font-size: 25px;
+        font-size: 30px;
     }
     .product_info h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
     .product_info p {
-        font-size: 25px;
+        font-size: 30px;
     }
     .product_info img {
-        height: 180px;
+        height: 250px;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1580px) {
     .btn {
-        font-size: 18px;
-        padding: 6px 20px;
+        font-size: 20px;
+        padding: 5px 30px;
     }
     .btn_remove {
         font-size: 20px;
     }
     .product_info h1 {
-        font-size: 18px;
+        font-size: 20px;
     }
     .product_info p {
-        font-size: 18px;
+        font-size: 20px;
     }
     .product_info img {
         height: 150px;

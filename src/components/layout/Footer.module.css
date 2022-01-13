@@ -29,7 +29,7 @@
 }
 
 .copy_right {
-    margin-top: .6em;
+    margin-top: 2px;
 }
 
 .copy_right span {
@@ -38,9 +38,10 @@
 
 .mensage {
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
     font-style: italic;
 }
+
 @media (max-width: 2560px) {
     .list {
         font-size: 35px;
@@ -53,23 +54,19 @@
     }
 }
 
-@media (max-width: 1440px) {
-    .footer {
-        padding: 150px;
-    }
+@media (max-width: 2000px) {
     .list {
         font-size: 25px;
     }
     .copy_right {
-        font-size: 18px;
+        font-size: 25px;
     }
     .mensage {
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
-
-@media (max-width: 1024px) {
+@media (max-width: 1580px) {
     .footer {
         padding: 100px;
     }
@@ -80,7 +77,14 @@
         font-size: 15px;
     }
     .mensage {
-        font-size: 18px;
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .mensage {
+        font-size: 12px;
     }
 }
 
@@ -90,10 +94,6 @@
     }
     .copy_right {
         font-size: 12px;
-    }
-    .mensage {
-        font-size: 15px;
-        margin-top: 5px;
     }
 }
 

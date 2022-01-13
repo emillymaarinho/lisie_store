@@ -1,4 +1,4 @@
-const BASE_URL = process.env.PUBLIC_URL || "http://localhost:5000"
+const BASE_URL = " https://mocki.io/v1/2a0f42c3-8083-4821-999a-43b01a5927be"
 
 const getAllCategories = async () => {
     const response = await fetch(`${BASE_URL}/categories`, {
@@ -22,7 +22,6 @@ const addProduct = async (product) => {
 }
 
 const getAllProducts = async () => {
-    console.log("oi", BASE_URL)
     const response = await fetch(`${BASE_URL}/products`, {
         method: 'GET',
         headers: {
@@ -43,7 +42,7 @@ const removeProduct = async (id) => {
 }
 
 const getOneProduct = async (id) => {
-    const response = await fetch(`${BASE_URL}/${id}`, {
+    const response = await fetch(`${BASE_URL}/products/${id}`, {
         method: 'GET',
         headers: {
             'content-type': 'application.json',
