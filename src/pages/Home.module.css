@@ -10,7 +10,7 @@
 
 .home_container h1 {
     font-size: 1.5em;
-    margin-bottom: .5em;
+    margin-bottom: 5px;
 }
 
 .home_container p {
@@ -27,20 +27,37 @@
         font-size: 60px;
     }
     .home_container p {
-        font-size: 35px;
+        font-size: 40px;
     }
     .home_container {
-        height: 800px;
+        height: 700px;
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 2000px) {
+    .home_container h1 {
+        font-size: 45px;
+    }
+    .home_container p {
+        font-size: 30px;
+    }
+    .home_container {
+        height: 600px;
+    }
+} 
+@media (max-width: 1580px) {
     .home_container h1 {
         font-size: 35px;
     }
     .home_container p {
         font-size: 20px;
     }
+    .home_container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 1440px) {
     .home_container {
         height: 500px;
     }

@@ -17,39 +17,33 @@
 
 @media (max-width: 2560px) {
     .btn {
-        font-size: 40px;
-        padding: 8px 25px;   
+        font-size: 50px;
+        padding: 5px 80px;   
     }
 }
 
 @media (max-width: 2000px) {
     .btn {
-        font-size: 30px;
+        font-size: 35px;
     }
 }
 
 @media (max-width: 1580px) {
     .btn {
-        font-size: 25px;
+        font-size: 20px;
+        padding: 5px 60px;
     }
 }
 
-@media (max-width: 1440px) {
-    .btn {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 768px) {
-    .btn {
-        font-size: 15px;
-        padding: 5px 20px;  
-    }
-}
-
-@media (max-width: 493px) {
+@media (max-width: 1024px) {
     .btn {
         font-size: 15px;
     }
-  
+}
+
+@media (max-width: 320px) {
+    .btn {
+        font-size: 13px;
+        padding: 5px 45px;
+    }
 }
