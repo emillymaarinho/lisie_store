@@ -20,8 +20,8 @@ const ProductForm = ({ handleSubmit, btnText, productData }) => {
 
     useEffect(() => {
         const getCategories = async () => {
-            const resul = await getAllCategories()
-            setCategories(resul)
+            const result = await getAllCategories()
+            setCategories(result)
         }
         getCategories();
     }, [])
